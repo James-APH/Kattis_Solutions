@@ -12,7 +12,7 @@ int main() {
     int obs;
     cin >> obs;
     double SL_min = getSLminute(obs);
-    cout << setprecision(9) << fixed << SL_min << endl;
+    cout << setprecision(7) << fixed << SL_min << endl;
 
 }
 
