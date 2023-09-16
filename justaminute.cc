@@ -1,4 +1,6 @@
 #include <iostream>
+#include <iomanip>
+
 
 using namespace std;
 
@@ -10,7 +12,7 @@ int main() {
     int obs;
     cin >> obs;
     double SL_min = getSLminute(obs);
-    cout << SL_min << endl;
+    cout << setprecision(9) << fixed << SL_min << endl;
 
 }
 
@@ -22,8 +24,7 @@ double getSLminute(int obs) {
         min_sum += min;
         sec_sum += sec;
     }
-    double SLM =  sec_sum / (min_sum * 60);
-    return SLM;
+    return sec_sum / (min_sum * 60);
 }
 
 
