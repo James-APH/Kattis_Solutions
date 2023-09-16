@@ -8,6 +8,7 @@ double getSLminute(int);
 
 int main() {
     int obs;
+    cin >> obs;
     double SL_min = getSLminute(obs);
     cout << SL_min << endl;
 
@@ -21,7 +22,7 @@ double getSLminute(int obs) {
         min_sum += min;
         sec_sum += sec;
     }
-    double SLM =  sec_sum / (min_sum*60);
+    double SLM =  sec_sum / (min_sum * 60);
     return SLM;
 }
 
