@@ -7,6 +7,7 @@ using namespace std;
 
 int getProduct(int);
 
+int power(int, int);
 
 int main() {
   int iters;
@@ -22,5 +23,14 @@ int main() {
 int getProduct(int num) {
   int p = num % 10;
   num = num / 10;
-  return pow(num, p);
+  return power(num, p);
+}
+
+int power(int n, int p) {
+  if(p == 0) return 1;
+  int sum = n;
+  for(int i = 1; i < p; i++) {
+    sum*=n;
+  }
+  return sum;
 }
