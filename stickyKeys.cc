@@ -19,9 +19,10 @@ int main() {
 
 string noDupes(string str, int len) {
   string newStr = "";
-  for(int i = 0; i < len; i++) {
-    if(str[i] != str[i+1]) {
-      newStr[i] += str[i];
+  newStr += str[0];
+  for(int i = 1; i < len; i++) {
+    if(str[i] != str[i-1]) {
+      newStr += str[i];
     }
   }
 return newStr;
