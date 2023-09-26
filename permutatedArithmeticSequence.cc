@@ -2,14 +2,13 @@
 #include <vector>
 
 using namespace std;
-// 2 functions:
-// 1. is arithmetic
-vector<int> makeVect(int, vector<int>);
 
+
+
+vector<int> makeVect(int, vector<int>);
 
 bool isArithmetic(const int,const vector<int>);
 
-// 2. isPermutedArithmetic
 bool isPermutedArithmetic(const int, const vector<int>);
 
 
@@ -29,12 +28,17 @@ vector<int> makeVect(int length, vector<int> &vect) {
 }
 
 
-bool isArithmetic(const int length,const vector<int>) {
-
+bool isArithmetic(const int length,const vector<int> vect) {
+  int diff = vect[1] - vect[0];
+  for(int i = 1; i < length; i++) {
+    if(diff != vect[i+1] - vect[i])
+      return false;
+  }
+  return true;
 }
 
 
-bool isPermutedArithmetic(const length, const vector<int>) {
-
+bool isPermutedArithmetic(const length, vector<int>) {
+  
 
 }
