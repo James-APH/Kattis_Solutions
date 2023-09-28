@@ -1,11 +1,17 @@
 #include <iostream>
 #include <string>
+#include <algorithm>
 
 using namespace std;
 
 
 int getNum(int i, string str) {
   return(str[i] - '0');
+}
+
+
+int getDigit(int d) {
+  return ((d * 2 > 9) ? ((d*2)%10) + ((d*2)/10):(d*2));
 }
 
 bool checkSum(int length, string str) {
@@ -18,27 +24,23 @@ bool checkSum(int length, string str) {
       d = getNum(i, str);
       sum += getDigit(d);
     }
-    return ((sum % 10) == 0);
   }
-}
-
-int getDigit(int d) {
-  return ((d * 2 > 9)? ((d*2)%10) + ((d*2)/10):(d*2));
+  return ((sum % 10) == 0);
 }
 
 int main() {
-  int t, int length;
+  int t, length;
   string str;
   bool isValid = false;
   
 
   cin >> t;
-  for(int i = 0; i < t; i++ {
+  for(int i = 0; i < t; i++) {
     cin >> str;
     reverse(str.begin(), str.end());
     length = str.length();
     isValid = checkSum(length, str);
-    cout << (isValid ? "PASS" : "FAIL");
+    cout << (isValid ? "PASS" : "FAIL") << endl;
   }
 
 
