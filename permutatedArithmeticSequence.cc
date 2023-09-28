@@ -20,11 +20,10 @@ int main() {
 
   for(int i = 0; i < amount_of_sequences; i++) {
     vector<int> vect; 
+    
     cin >> sequence_length;
-    
+
     makeVect(sequence_length, vect);
-    
-    cout << vect << endl;
 
     if(isArithmetic(sequence_length, vect))
     {
@@ -54,8 +53,8 @@ void makeVect(int length, vector<int>& vect) {
 
 bool isArithmetic(const int length, const vector<int> vect) {
   int diff = vect[1] - vect[0];
-  for(int i = 1; i < length; i++) {
-    if(diff != vect[i+1] - vect[i])
+  for(int i = 0; i < length-1; i++) {
+    if(diff != (vect[i+1] - vect[i]))
       return false;
   }
   return true;
