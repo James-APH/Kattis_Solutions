@@ -29,7 +29,7 @@ void setVectors(int N, int M, int K, vector<double>& plots, vector<double>& hous
   int side_length;
   for(int i = 0; i < N; i++) {
     cin >> plot_radius;
-    n_plots.push_back(plot_radius);
+    plots.push_back(plot_radius);
   }
 
   for(int i = 0; i < M; i++) {
@@ -50,7 +50,7 @@ void setVectors(int N, int M, int K, vector<double>& plots, vector<double>& hous
 int main() {
   int N, M, K;
   int iters = (N <= M+K ? N: M+K);
-  int plots_to_fill +=;
+  int plots_to_fill = 0;
   vector<double> plots;
   vector<double> houses;
 
