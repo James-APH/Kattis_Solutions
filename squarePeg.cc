@@ -69,6 +69,6 @@ int main() {
     plots_to_fill += (houses[i] < plots[i]);
   }
 
-  cout << plots_to_fill;
+  cout << plots_to_fill << endl;
 }
 
