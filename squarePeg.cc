@@ -25,8 +25,9 @@ using namespace std;
 
 void setVectors(int N, int M, int K, vector<double>& plots, vector<double>& houses) 
 {
-  int plot_radius;
-  int side_length;
+  int plot_radius, side_length;
+
+
   for(int i = 0; i < N; i++) {
     cin >> plot_radius;
     plots.push_back(plot_radius);
@@ -39,9 +40,11 @@ void setVectors(int N, int M, int K, vector<double>& plots, vector<double>& hous
 
   for(int i = 0; i < K; i++) {
     cin >> side_length;
-    int square_radius = (sqrt(pow(side_length, 2) + pow(side_length, 2))/2);
+    double square_radius = (sqrt(pow(side_length, 2) + pow(side_length, 2))/2);
     houses.push_back(square_radius);
   }
+
+
   sort(plots.begin(), plots.end());
   sort(houses.begin(), houses.end());
 }
