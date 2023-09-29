@@ -6,7 +6,7 @@
 using namespace std;
 
 
-void setVectors(int N, int M, int K, vector<double>& plots, vector<double>& houses) 
+void setVectors(int N, int M, int K, vector<int>& plots, vector<int>& houses) 
 {
   int plot_radius, side_length;
 
@@ -25,7 +25,7 @@ void setVectors(int N, int M, int K, vector<double>& plots, vector<double>& hous
   for(int i = 0; i < K; i++) 
   {
     cin >> side_length;
-    double square_radius = (sqrt(pow(side_length, 2) + pow(side_length, 2))/2);
+    int square_radius = (sqrt(pow(side_length, 2) + pow(side_length, 2))/2);
     houses.push_back(square_radius);
   }
 
@@ -43,8 +43,8 @@ int main() {
   int plots_to_fill = 0;
   
   // declaring house related vectors;
-  vector<double> plots;
-  vector<double> houses;
+  vector<int> plots;
+  vector<int> houses;
 
 
   cin >> N >> M >> K;
