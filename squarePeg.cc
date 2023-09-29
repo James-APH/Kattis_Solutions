@@ -48,27 +48,27 @@ void setVectors(int N, int M, int K, vector<double>& plots, vector<double>& hous
 
 
 int main() {
+  // declaring house related variables:
   int N, M, K;
-  int iters = (N <= M+K ? N: M+K);
+
+  // declaring loop related variables:
+  int iters;
   int plots_to_fill = 0;
+  
+  // declaring house related vectors;
   vector<double> plots;
   vector<double> houses;
 
-  cin >> N >> M >> K;
 
+  cin >> N >> M >> K;
+  
+  iters = (N <= M+K ? N: M+K);
   setVectors(N, M, K, plots, houses);
 
-
   for(int i = 0; i < iters; i++) {
-    plots_to_fill += (houses[i] <= plots[i]);
+    plots_to_fill += (houses[i] < plots[i]);
   }
 
   cout << plots_to_fill;
-
-
-
-
-
-
 }
 
