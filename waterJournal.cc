@@ -22,36 +22,33 @@ using namespace std;
 // 2. simply output -1 if Eugene’s memory is faulty and it isn’t possible.
 //
 
-void setVector(int n, vector<int>& log) {
+void setVector(int numOfDays, vector<int>& logs) {
   int water;
-  for(int i = 0; i < n-1; i++) {
+  for(int i = 0; i < numOfDays - 1; i++) {
     cin >> water;
-    log.push_back(water);
+    logs.push_back(water);
   }
-  sort(log.begin(), log.end());
+  sort(logs.begin(), logs.end());
 }
 
 
 int main() {
-  int n, a, b;
-  cin >> n >> a >> b;
-  vector<int> log;
-  setVector(n, log);
+  int numOfDays, minDrinks, maxDrinks;
+  cin >> numOfDays >> minDrinks >> maxDrinks;
+  vector<int> logs;
+  setVector(numOfDays, logs);
 
-  if(a != log[0] && b != log[n-2]) {
-    cout << -1 << endl;
-  }
-
-  if(a != log[0]) 
+  if(minDrinks != logs[0] && maxDrinks == logs[numOfDays - 2]) 
   {
-    cout << a;
+    cout << minDrinks;
   } 
-  else if(b != log[n-2]) {
-    cout << b;
-  } 
-  else if(a == log[0] && b == log[n-2])
+  else if(maxDrinks != logs[numOfDays-2] && minDrinks == logs[0])
   {
-    for(int i = a; i <= b; i++) 
+    cout << maxDrinks;
+  } 
+  else if(minDrinks == logs[0] && maxDrinks == logs[numOfDays - 2])
+  {
+    for(int i = minDrinks; i <= maxDrinks; i++) 
     {
       cout << i << endl;
     }
@@ -60,6 +57,4 @@ int main() {
   {
     cout << -1 << endl;
   }
-
-
 }
