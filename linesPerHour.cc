@@ -33,8 +33,10 @@ int main() {
   
 
   int maxLines = lph * 5;
+  
   vector<int> problems;
   setVect(n, problems);
+  
   int maxProblems = getMaxProblems(problems, maxLines);
   cout << maxProblems << endl;
   
