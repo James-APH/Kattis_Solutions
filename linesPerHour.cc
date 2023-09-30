@@ -7,18 +7,21 @@ using namespace std;
 
 
 void setVect(int n, vector<int>& problems) {
-  int loc;
+  int linesOfCode;
   for(int i = 0; i < n; i++) {
-    cin >> loc;
-    problems.push_back(loc);
+    cin >> linesOfCode;
+    problems.push_back(linesOfCode);
   }
   sort(problems.begin(), problems.end());
 }
 
+
+
 int getMaxProblems(vector<int> problems, int maxLines) {
   int i = 0, maxProblems = 0;
-  while(maxLines-problems[i] >= 0) {
-    maxLines-=problems[i];
+  int length = problems.size();  
+  while(maxLines - problems[i] >= 0 && i < length) {
+    maxLines -= problems[i];
     maxProblems++;
     i++;
   }
@@ -28,16 +31,15 @@ int getMaxProblems(vector<int> problems, int maxLines) {
 
 
 int main() {
-  int n, lph;
-  cin >> n >> lph;
+  int n, linesPerHour;
+  cin >> n >> linesPerHour;
   
 
-  int maxLines = lph * 5;
-  
+  int maxLines = linesPerHour * 5;
   vector<int> problems;
   setVect(n, problems);
-  
   int maxProblems = getMaxProblems(problems, maxLines);
   cout << maxProblems << endl;
   
 }
+
