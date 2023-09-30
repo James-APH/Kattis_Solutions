@@ -6,6 +6,19 @@
 using namespace std;
 
 
+
+
+
+int power(int base, int power) {
+  if(power == 0) return 1;
+  if(power == 1) return base;
+  return base * power(base, power-1);
+}
+
+
+
+
+
 void setVectors(int N, int M, int K, vector<int>& plots, vector<int>& houses) 
 {
   int plot_radius, side_length;
@@ -25,7 +38,7 @@ void setVectors(int N, int M, int K, vector<int>& plots, vector<int>& houses)
   for(int i = 0; i < K; i++) 
   {
     cin >> side_length;
-    int square_radius = (sqrt(pow(side_length, 2) + pow(side_length, 2))/2);
+    int square_radius = (sqrt(power(side_length, 2) + power(side_length, 2))/2);
     houses.push_back(square_radius);
   }
 
