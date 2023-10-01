@@ -7,16 +7,28 @@ using namespace std;
 
 
 
-long long getNumOfPrescriptions(long long maxGram, long long maxPill, long long prefPill) {
+void getNumOfPrescriptions(long long maxGram, long long maxPill, long long prefPill) {
   int combinations = 0;
-
-  for(long long i = 0; i < maxGram && i < maxPill; i++ ) {
-    if(maxPill % i == 0 && maxPill/i < prefPill) {
+  vector<long long> work;
+  long long iters = (maxGram == maxPill ? maxGram : maxGram < maxPill ? maxGram:maxPill);
+  for(long long i = 0; i < iters; i++ ) {
+    if(maxPill % i && maxGram % i) {
       combinations++;
+      if(maxGram%(maxPill/i) && maxPill/i < prefpill) {
+        work.push_back(i);
+      }
     }
   }
 
-  return combinations;
+  cout << combinations << endl;
+
+  int length = work.length();
+
+  for(int i = 0; i < length(); i++) {
+    cout << work[i] << endl;
+
+
+  }
 }
 
 int main() {
