@@ -5,13 +5,6 @@
 
 using namespace std;
 
-// inputs: N number of Pw's in list
-//      N1 Password   Probability Pw is Correct
-//      N2 Password   Probability Pw is Correct
-//      N3 Password   Probability Pw is Correct
-
-// 
-
 
 
 int main() {
@@ -22,8 +15,6 @@ int main() {
   double k;
   
   cin >> n;
-  // vector to list probability;
-  // vector to list word count;
   
   vector<double> lp;
 
@@ -32,14 +23,13 @@ int main() {
     lp.push_back(k);
   }
 
-  sort(lp.begin(), lp.end());
+  sort(lp.begin(), lp.end(), greater<double>());
   
 
   double sum = 0;
   
 
   for(int i = 0; i < n; i++) {
-    cout << "lp[" << i << "] = " << lp[i] << endl;
     sum += (lp[i] * (i+1));
   }
   
