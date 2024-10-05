@@ -1,8 +1,7 @@
 #include <iostream>
 #include <string>
 
-
-int main () {
+int main() {
   std::string str;
   std::string outputStr;
   std::cin >> str;
@@ -11,10 +10,9 @@ int main () {
 
   for (int i = 1; i < str.length(); ++i) {
     if (str[i] == '-')
-      outputStr += str[i+1];
+      outputStr += str[i + 1];
   }
   std::cout << outputStr << std::endl;
-
 
   return 0;
 }
