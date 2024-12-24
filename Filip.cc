@@ -9,3 +9,5 @@ int main() {
    std::reverse(begin(b), end(b));
    std::cout << std::max(std::stoi(a), std::stoi(b));
 }
+
+

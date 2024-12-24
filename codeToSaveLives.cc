@@ -1,12 +1,10 @@
 #include <algorithm>
 #include <iostream>
-#include <string>
 #include <sstream>
+#include <string>
 
 int convertStringToNumber(std::string str) {
-  auto isSpace = [](auto c) {
-    return c == ' ';
-  };
+  auto isSpace = [](auto c) { return c == ' '; };
   str.erase(std::remove_if(begin(str), end(str), isSpace), end(str));
   return std::stoi(str);
 }
@@ -16,13 +14,13 @@ std::string convertNumberToString(int n) {
   strReader << n;
   std::string str = strReader.str();
   strReader.str(std::string());
-  for (auto& c : str) {
+  for (auto &c : str) {
     strReader << c << " ";
   }
   return strReader.str();
 }
 
-int main () {
+int main() {
   int n;
   std::cin >> n;
   std::cin.ignore();

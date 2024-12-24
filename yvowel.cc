@@ -3,23 +3,21 @@
 
 using namespace std;
 
-
-void vowel(string str, int& sumV, int& sumVY) {
+void vowel(string str, int &sumV, int &sumVY) {
   int length = str.length();
   char stri;
-  for(int i = 0; i < length; i++) {
+  for (int i = 0; i < length; i++) {
     stri = str[i];
-    if(stri == 'a' || stri == 'e' || stri == 'i' || stri == 'u' || stri == 'o') {
+    if (stri == 'a' || stri == 'e' || stri == 'i' || stri == 'u' ||
+        stri == 'o') {
       sumV++;
       sumVY++;
     }
-    if(stri == 'y') {
+    if (stri == 'y') {
       sumVY++;
     }
   }
-} 
-
-
+}
 
 int main() {
   string str;

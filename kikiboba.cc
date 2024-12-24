@@ -1,8 +1,7 @@
 #include <iostream>
 #include <string>
 
-
-int main () {
+int main() {
   std::string str;
   std::cin >> str;
   int bCount = 0, kCount = 0;

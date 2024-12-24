@@ -6,8 +6,7 @@ void count(int start, int end) {
   }
 }
 
-
-int main () {
+int main() {
   int iters;
   int previous = 0, current = 0;
   bool fullList = true;

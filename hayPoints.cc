@@ -2,7 +2,6 @@
 #include <string>
 #include <unordered_map>
 
-
 int main() {
   int m, n;
   std::unordered_map<std::string, int> jobs;
@@ -16,7 +15,6 @@ int main() {
     jobs.insert({job, price});
   }
 
-  
   for (int i = 0; i < n; i++) {
     int cost = 0;
     std::string keyWord = "";

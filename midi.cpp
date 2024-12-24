@@ -1,7 +1,6 @@
 #include <iostream>
-#include <string>
 #include <ranges>
-
+#include <string>
 
 int main() {
   int iters;
@@ -11,9 +10,9 @@ int main() {
   std::string words = "";
   for (int i = 0; i < iters; i++) {
     std::cin >> word;
-    std::reverse(begin(word), end(word)); 
+    std::reverse(begin(word), end(word));
     words = word + words;
   }
-    
+
   std::cout << words << std::endl;
 }

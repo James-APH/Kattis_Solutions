@@ -1,8 +1,8 @@
+#include <algorithm>
 #include <iostream>
 #include <vector>
-#include <algorithm>
 
-int main () {
+int main() {
   std::vector<int> vect;
   std::vector<int> vectClone;
 

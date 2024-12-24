@@ -6,7 +6,7 @@ for x in range(n):
     if "pink" in str or "rose" in str:
         count += 1
 
-if (count == 0):
+if count == 0:
     print("I must watch Star Wars with my daughter")
 else:
     print(count)

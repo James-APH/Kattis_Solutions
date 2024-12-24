@@ -3,8 +3,4 @@
 
 using namespace std;
 
-int main() {
-  string C, K;
-    
-
-}
+int main() { string C, K; }

@@ -1,24 +1,20 @@
+#include <algorithm>
 #include <iostream>
 #include <vector>
-#include <algorithm>
 
 /*
-* --> 1 day to plant a seedling
-*
-* --> grow length is known
-*
-* initially we know the maximum "time" until the seedlings are all grown up
-*
-*
-*
-*
-*/
+ * --> 1 day to plant a seedling
+ *
+ * --> grow length is known
+ *
+ * initially we know the maximum "time" until the seedlings are all grown up
+ *
+ *
+ *
+ *
+ */
 
-
-
-
-
-int main () {
+int main() {
   int n;
   std::cin >> n;
 
@@ -33,13 +29,12 @@ int main () {
   sort(begin(vect), end(vect));
   std::reverse(begin(vect), end(vect));
 
-
   int addedDistance = 0;
   int distance = vect[0];
-  for (auto& v : vect) {
+  for (auto &v : vect) {
     if (distance == v) {
       addedDistance++;
-      distance=v;
+      distance = v;
     } else {
       distance--;
     }

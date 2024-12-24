@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-int main () {
+int main() {
   int N;
   std::cin >> N;
 
@@ -17,6 +17,4 @@ int main () {
     std::cout << clone << '\n';
     std::cout << differences << '\n' << std::endl;
   }
-
-
 }

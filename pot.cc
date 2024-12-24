@@ -1,9 +1,7 @@
-#include <iostream>
 #include <cmath>
+#include <iostream>
 
 using namespace std;
-
-
 
 int getProduct(int);
 
@@ -13,7 +11,7 @@ int main() {
   int iters;
   cin >> iters;
   int sum = 0, num;
-  for(int i = 0; i < iters; i++) {
+  for (int i = 0; i < iters; i++) {
     cin >> num;
     sum += getProduct(num);
   }
@@ -27,10 +25,11 @@ int getProduct(int num) {
 }
 
 int power(int n, int p) {
-  if(p == 0) return 1;
+  if (p == 0)
+    return 1;
   int sum = n;
-  for(int i = 1; i < p; i++) {
-    sum*=n;
+  for (int i = 1; i < p; i++) {
+    sum *= n;
   }
   return sum;
 }

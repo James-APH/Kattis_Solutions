@@ -1,7 +1,7 @@
 #include <iostream>
 
-int main () {
+int main() {
   int a, b, c;
   std::cin >> a >> b >> c;
-  std::cout << c - (a+b);
+  std::cout << c - (a + b);
 }

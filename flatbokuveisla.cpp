@@ -1,7 +1,6 @@
 #include <iostream>
 
-
-int main () {
+int main() {
   // n total slices
   // number of people living in household = m
   // all residents must get an equal number of slices

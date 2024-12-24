@@ -1,8 +1,7 @@
-#include <iostream>
 #include <iomanip>
+#include <iostream>
 
-
-int main () {
+int main() {
   double N;
   std::cin >> N;
   double X = N * 0.09144;

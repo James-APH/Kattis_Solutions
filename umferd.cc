@@ -1,17 +1,17 @@
 #include <iostream>
 
-int main () {
+int main() {
   int cols, rows;
   double emptyCount = 0;
   char symb;
-  
+
   std::cin >> cols >> rows;
 
-  for (int i = 0; i < cols*rows; ++i) {
+  for (int i = 0; i < cols * rows; ++i) {
     std::cin >> symb;
-    if(symb == '.') {
+    if (symb == '.') {
       emptyCount++;
     }
   }
-  std::cout << emptyCount/(cols*rows) << std::endl;
+  std::cout << emptyCount / (cols * rows) << std::endl;
 }

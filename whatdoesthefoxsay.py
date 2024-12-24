@@ -21,4 +21,3 @@ for x in range(testCases):
             barredWords.append(animalNoise.split(" ")[2])
     foxSays = " ".join(removeSounds(soundList, barredWords))
     print(foxSays)
-

@@ -1,9 +1,9 @@
-#include <iostream>
 #include <iomanip>
+#include <iostream>
 
 double calculateProbability(double k) {
   double p = 0;
-  for(int i = 1; i <= 6; i++) {
+  for (int i = 1; i <= 6; i++) {
     for (int j = 1; j <= 6; j++) {
       p += ((i + j) == k);
     }
@@ -12,10 +12,7 @@ double calculateProbability(double k) {
   return p;
 }
 
-
-
-
-int main () {
+int main() {
   int N;
   std::cin >> N;
   double probability = 0;
@@ -26,5 +23,4 @@ int main () {
   }
   std::cout << std::setprecision(4) << std::fixed;
   std::cout << probability << std::endl;
-
 }

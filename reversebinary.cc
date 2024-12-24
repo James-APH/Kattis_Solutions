@@ -1,13 +1,13 @@
-#include <iostream>
-#include <cmath>
-#include <sstream>
 #include <algorithm>
+#include <cmath>
+#include <iostream>
+#include <sstream>
 
 std::string toBinary(int num) {
   std::stringstream binVal;
   while (num != 0) {
     binVal << (num % 2 == 1 ? "1" : "0");
-    num = num/2;
+    num = num / 2;
   }
   return binVal.str();
 }
@@ -22,12 +22,11 @@ int toDecimal(std::string num) {
   return decVal;
 }
 
-int main () {
+int main() {
   int num;
   std::cin >> num;
   std::string reversedBinaryNumber = toBinary(num);
   std::reverse(begin(reversedBinaryNumber), end(reversedBinaryNumber));
   int newDecimalNumer = toDecimal(reversedBinaryNumber);
   std::cout << newDecimalNumer << std::endl;
-
 }
